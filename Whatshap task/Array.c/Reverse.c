@@ -1,19 +1,16 @@
-#include<stdio.h>
+#include<Stdio.h>
 main(){
-	int a[3];
-	int i,rem,num,rev=0;
-	printf("\nEnter Element of Array...\n");
-	for(i=0;i<3;i++){
+	int a[5];
+	int i,temp;
+	for(i=0;i<5;i++){
 		printf("Enter a[%d]",i);
 		scanf("%d",&a[i]);
-		while(num!=0){
-		rem=num%10;
-		rev=rev*10+rem;
-		a[i]=num/10;
 	}
+	for(i=0;i<5/2;i++){
+		temp=a[i];
+		a[i]=a[5-i-1];
+		a[5-i-1]=temp;
 	}
-	for(i=0;i<3;i++){
-		printf("%d",rev);
-	}
-	
-}
+		for(i=0;i<5;i++){
+			printf("%d",a[i]);
+}}
