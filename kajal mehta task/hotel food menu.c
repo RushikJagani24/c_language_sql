@@ -1,78 +1,80 @@
 #include<stdio.h>
 main(){
-	int ch,qty,total=0;
-	char ans,y,n;
-	list:
-	printf("\n1.Zunglee Vadapav        40");
-	printf("\n2.Aloopuri		 60");
-	printf("\n3.Fankie                 60");
-	printf("\n4.Manchurian            140");
-	printf("\n5.Dhosa(1paper+1Bhaji)  150");
-	printf("\n6.Bhanuna Khaman	300");
+	int choice,qty,total=0,totalamt=0;
+	char ch;
+	do{
+	menu:
+	printf("\n-----------------Menu-----------------\n");
+	printf("1.Vadapav						price=40rs\n");
+	printf("2.Aloopuri						price=40rs\n");
+	printf("3.Fankie						price=60rs\n");
+	printf("4.Burger						price=140rs\n");
+	printf("5.Dhosa							price=150rs\n");
+	printf("6.Pizza							price=300rs\n");
 	
-	printf("\nEnter your choice:");
-	scanf("%d",&ch);
+	printf("\nEnter Your Choice:");
+	scanf("%d",&choice);
 	
-	switch(ch){
+	switch(choice){ 
+	
 		case 1:
-			printf("\nyou choose Zunglee Vadapav.....");
-			printf("\nEnter Quntity of Zunglee Vadapav:");
+			printf("You Have Selected Vadapav..\n");
+			printf("Enter Qauntity:");
 			scanf("%d",&qty);
-			total=total+(40*qty);
+			total=(40*qty);
 			printf("Total=%d",total);
 		break;
-			
 		case 2:
-			printf("\nyou choose Alloopuri.....");
-			printf("\nEnter Quntity of Alloopuri:");
+			printf("You Have Selected Aloopuri..\n");
+			printf("Enter Qauntity:");
 			scanf("%d",&qty);
-			total=total+(60*qty);
+			total=(40*qty);
 			printf("Total=%d",total);
 		break;
-		
 		case 3:
-			printf("\nyou choose Fankie.....");
-			printf("\nEnter Quntity of Fankie:");
+			printf("You Have Selected Fankie..\n");
+			printf("Enter Qauntity:");
 			scanf("%d",&qty);
-			total=total+(60*qty);
+			total=(60*qty);
 			printf("Total=%d",total);
 		break;
-		
 		case 4:
-			printf("\nyou choose Manchurian.....");
-			printf("\nEnter Quntity of Manchurian:");
+			printf("You Have Selected Burger..\n");
+			printf("Enter Qauntity:");
 			scanf("%d",&qty);
-			total=total+(140*qty);
+			total=(140*qty);
 			printf("Total=%d",total);
 		break;
-
 		case 5:
-			printf("\nyou choose Dhosa.....");
-			printf("\nEnter Quntity of Dhosa:");
+			printf("You Have Selected Dhosa..\n");
+			printf("Enter Qauntity:");
 			scanf("%d",&qty);
-			total=total+(150*qty);
+			total=(150*qty);
 			printf("Total=%d",total);
 		break;
-
 		case 6:
-			printf("\nyou choose Bhanuna Khaman.....");
-			printf("\nEnter Quntity of Bhanuna Khaman:");
+			printf("You Have Selected Khaman..\n");
+			printf("Enter Qauntity:");
 			scanf("%d",&qty);
-			total=total+(300*qty);
+			total=(300*qty);
 			printf("Total=%d",total);
-		break;
-		
+		break;		
 		default:
-			printf("Invalid Item Selection..");
+			printf("\nPlease Available Select Item..\n");
+		break;
 	}
- 	
- 	
- 	printf("\n\nDo you Want to Other Item:");
- 	printf("\nEnter your next choice:");
- 	scanf("%d",&ans);
- 	if(ans=='y'){
- 		goto list;
-	 }
-	 printf("\nTotal amount : %d",total);
-     printf("\nThank You Come Again");
-}
+
+	totalamt=totalamt+total;
+	printf("\nTotal Amount=%d",totalamt);
+	printf("\nDo ypu Want to More Order ? y & n:");
+	scanf("%s",&ch);
+	}while(ch=='y');{
+		goto menu;
+	if(ch == 'n'){
+		printf("\n Your Bill...");
+		printf("\n Total Amount=%d",totalamt);
+	}
+	else{
+		printf("Wrong choice");
+	}
+}}
