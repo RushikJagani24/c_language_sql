@@ -26,6 +26,7 @@ class batsman:public cricketer
 		void get2()
 		{
 			avg_run=total_run/5;
+			cout<<"Total run:"<<total_run<<endl;
 			cout<<"Average Run:"<<avg_run<<endl;
 		}
 };
